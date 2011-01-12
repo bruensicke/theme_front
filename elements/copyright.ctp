@@ -1,0 +1,1 @@
+(c) Copyright 2011 brünsicke.com GmbH. All Rights Reserved. 
