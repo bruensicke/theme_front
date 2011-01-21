@@ -9,17 +9,16 @@
 	echo $this->Html->meta('icon');
 
 	echo $this->Html->css(array(
+		'/flour/css/fancybox',
 		// '/flour/css/blueprint',
 		'master',
 		'theme',
 	));
 	echo $this->Html->script(array(
-		'/flour/js/jquery/jquery',
-		'/flour/js/jquery/jqueryui',
-		'/flour/js/jquery/form',
-		'/flour/js/jquery/tipsy',
-		'/flour/js/jquery/blockui',
-		'/flour/js/init'
+		'/flour/js/jquery',
+		'/flour/js/jquery.fancybox',
+		'/flour/js/jquery.form',
+		'/flour/js/jquery.blockui',
 	));
 
 	echo $scripts_for_layout;
@@ -47,5 +46,10 @@
 		</div>
 	</div>
 	<?php echo $this->element('sql_dump'); ?>
+	<script>
+	$().ready(function() {
+		$("a.modal").fancybox();
+	});
+	</script>
 </body>
 </html>
