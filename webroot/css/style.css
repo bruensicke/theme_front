@@ -1,0 +1,1132 @@
+/* =  Bruensicke Template - Front  
+-------------------------------------------------------------- */
+
+/* =  reset  
+-------------------------------------------------------------- */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+    margin: 0pt;
+    padding: 0pt;
+    font-size: 100%;
+    vertical-align: baseline;
+    border: 0pt none;
+    outline: 0pt none;
+    background: none repeat scroll 0% 0% transparent;
+}
+ol,
+ul { list-style: none outside none }
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 62.5%;
+	background: url('../img/tile.gif') repeat scroll -70% 0pt;
+}
+a:link,
+a:visited {
+    outline: medium none;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+*::-moz-selection {
+    background: none repeat scroll 0% 0% rgb(234, 76, 136);
+    color: rgba(255, 255, 255, 0.85);
+}
+
+/* =  colors  
+-------------------------------------------------------------- */
+body {
+	background-color: #f0f0f0;
+    color: #333333;
+}
+a:link,
+a:visited {
+    color: #1d7ba8;
+}
+a:hover {
+    color: #0b577b;
+}
+#header { 
+	background: #1d7ba8; /* for non-css3 browsers */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1d7ba8', endColorstr='#0b577b'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#1d7ba8), to(#0b577b)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #1d7ba8,  #0b577b); /* for firefox 3.6+ */
+	}
+div#header ul {
+    color: #1d7ba8;
+}
+div#header ul li a {
+    color: #e6f1f5;
+}
+div#header ul li a:hover,
+div#header ul li#t-profile:hover a,
+div#header ul li#t-shots:hover a,
+div#header ul li#t-players:hover a {
+    color: #fff;
+}
+div#header ul li ul {
+    background-color: #1c749a;
+}
+
+ol.group li div.box a.item-over strong {
+    color: rgb(234, 76, 136);
+}
+
+#footer { 
+	border-top: 1px solid #dddddd;
+	background-color: #fff; 
+	}
+
+/* =  stucture  
+-------------------------------------------------------------- */
+#wrap-inner {
+    padding: 25px 0pt 30px;
+    background: url('../img/big-fade.png') repeat-x scroll -70% 0pt transparent;
+}
+#container {
+    position: relative;
+    width: 940px;
+    margin: 0pt auto;
+    padding: 0pt;
+    font-size: 1.2em;
+}
+#main {
+    float: left;
+    width: 700px;
+    font-size: 1.2em;
+}
+#sidebar {
+    float: right;
+    width: 220px;
+    font-size: 1.2em;
+}
+.clear {
+	clear: both;
+}
+
+/* =  header  
+-------------------------------------------------------------- */
+#header { 
+	min-height: 60px;
+	margin: 0 0 20px 0;
+	}
+#header-inner {
+    width: 940px;
+    margin: 0pt auto;
+    padding: 15px 0pt;
+}
+#logo {
+    float: left;
+    margin: 0pt;
+}
+#logo a,
+#logo span {
+    display: block;
+    width: 187px;
+    height: 30px;
+}
+#logo a:hover { opacity: 0.6 }
+
+
+/* =  primary navi
+-------------------------------------------------------------- */
+div#header ul {
+    float: left;
+    width: 584px;
+    margin: 2px 0pt 0pt 20px;
+}
+div#header ul li {
+    float: left;
+    margin: 0pt 4px 0pt 0pt;
+    font-size: 1.25em;
+    line-height: 1;
+}
+div#header ul li#t-profile,
+div#header ul li#t-signin,
+div#header ul li#t-signup { float: right }
+div#header ul li a {
+    display: block;
+    padding: 6px 10px 7px;
+    text-decoration: none;
+}
+div#header ul li a:hover,
+div#header ul li#t-profile:hover a,
+div#header ul li#t-shots:hover a,
+div#header ul li#t-players:hover a {
+    background: url('../img/glass-light.png') repeat-x scroll 0pt 50% rgba(255, 255, 255, 0.12);
+    -moz-border-radius: 6px 6px 6px 6px;
+}
+div#header ul li#t-signin a,
+div#header ul li#t-signup a {
+    padding: 0pt;
+    margin: 6px 10px 6px 5px;
+    font-size: 0.9em;
+}
+div#header ul li#t-signin a:hover,
+div#header ul li#t-signup a:hover {
+    background: none repeat scroll 0% 0% transparent;
+    -moz-border-radius: 0pt 0pt 0pt 0pt;
+}
+body#user-profile div#header ul li#t-profile a,
+body#shots div#header ul li#t-shots a,
+body#players div#header ul li#t-players a,
+body#tags div#header ul li#t-tags a,
+body#activity div#header ul li#t-activity a,
+body#upld div#header ul li#t-upld a,
+body#about div#header ul li#t-about a,
+body#following li#t-following a,
+body#incoming-activity li#t-activity a {
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    background: url('../img/primary-shadow.png') repeat-x scroll left top rgba(43, 48, 53, 0.53);
+    -moz-border-radius: 6px 6px 6px 6px;
+}
+div#header ul li#t-profile a.url,
+div#header ul li#t-shots a.has-sub,
+div#header ul li#t-players a.has-sub {
+    padding-right: 22px;
+    background: url('../img/icon-submenu.png') no-repeat scroll 100% 50% transparent;
+}
+div#header ul li#t-profile:hover a.url,
+body#user-profile div#header ul li#t-profile:hover a.url,
+div#header ul li#t-shots:hover a.has-sub,
+body#shots div#header ul li#t-shots:hover a.has-sub,
+div#header ul li#t-players:hover a.has-sub,
+body#players div#header ul li#t-players:hover a.has-sub {
+    background-color: rgba(255, 255, 255, 0.12);
+    background-image: url('../img/glass-light.png'), url('../img/icon-submenu.png');
+    background-repeat: repeat-x, no-repeat;
+    background-position: 0pt 50%, 100% 50%;
+}
+body#user-profile div#header ul li#t-profile a.url,
+body#shots div#header ul li#t-shots a.has-sub,
+body#players div#header ul li#t-players a.has-sub {
+    background-image: url('../img/primary-shadow.png'), url('../img/icon-submenu.png');
+    background-repeat: repeat-x, no-repeat;
+    background-position: left top, 100% 50%;
+}
+div#header ul li#t-profile:hover a,
+body#user-profile div#header ul li#t-profile:hover a,
+div#header ul li#t-shots:hover a,
+body#shots div#header ul li#t-shots:hover a,
+div#header ul li#t-players:hover a,
+body#players div#header ul li#t-players:hover a {
+    -moz-border-radius-bottomleft: 0pt;
+    -moz-border-radius-bottomright: 0pt;
+    -moz-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+div#header ul li ul {
+    position: absolute;
+    display: none;
+    float: left;
+    width: 120px;
+    padding: 5px 0pt;
+    -moz-border-radius: 0pt 6px 6px 6px;
+    -moz-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+}
+div#header ul li ul li {
+    clear: left;
+    margin: 0pt;
+    width: 100%;
+}
+
+div#header ul li:hover ul li a {
+    padding: 5px 10px;
+    font-size: 0.7em;
+    font-weight: normal;
+    color: rgb(187, 191, 195);
+    background: none repeat scroll 0% 0% transparent;
+    -moz-box-shadow: none;
+}
+div#header ul li ul li a:hover {
+    color: rgb(255, 255, 255);
+    background: none repeat scroll 0% 0% rgba(255, 255, 255, 0.1);
+    -moz-border-radius: 0pt 0pt 0pt 0pt;
+}
+div#header ul li ul li a:active { background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.15) }
+div#header ul li ul li:last-child a,
+div#header ul li ul li:last-child a,
+div#header ul li ul li:last-child a { border-bottom: medium none }
+
+
+/* =    
+-------------------------------------------------------------- */
+a.tagline-action {
+    margin: 0pt 0pt 0pt 3px;
+    font-size: 0.8em;
+    font-weight: bold;
+    padding-right: 12px;
+    background: url('../img/icon-bluearrow.png') no-repeat scroll 100% 4px transparent;
+}
+a.tagline-action:hover { background-position: 100% -18px }
+div.full {
+    width: 700px;
+    margin: 0pt 0pt 20px;
+    padding: 0pt;
+}
+h1 {
+    font-size: 1.8em;
+    line-height: 1.5em;
+}
+h1.compact {
+    font-size: 1.36em;
+    font-weight: normal;
+    line-height: 1.3;
+    color: rgb(119, 119, 119);
+}
+h1.compact strong { color: rgb(51, 51, 51) }
+div.notice {
+    padding: 10px 12px;
+    font-size: 1.7em;
+    font-weight: normal;
+    text-align: left;
+    color: rgb(255, 255, 255);
+    border-top: 1px solid rgb(133, 174, 211);
+    border-bottom: 1px solid rgb(204, 204, 204);
+    background: url('../img/alert-lines.png') repeat-x scroll left top rgb(97, 143, 185);
+}
+div.notice h2 {
+    width: 940px;
+    margin: 0pt auto;
+    font-weight: normal;
+    text-align: center;
+}
+ul.secondary {
+    margin: 0pt 0pt 15px;
+    padding: 0pt;
+    font-size: 0.8em;
+    line-height: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.9);
+    background: url('../img/border-2px.gif') repeat-x scroll left bottom transparent;
+}
+ul.secondary:after {
+    content: ".";
+    display: block;
+    height: 0pt;
+    clear: both;
+    visibility: hidden;
+}
+ul.secondary li {
+    float: left;
+    margin: 0pt 20px 0pt 0pt;
+    font-weight: bold;
+    line-height: 1;
+    text-transform: uppercase;
+    color: rgb(170, 170, 170);
+}
+ul.secondary li a,
+ul.secondary li span.empty {
+    float: left;
+    padding: 0pt 0pt 8px;
+    text-decoration: none;
+}
+ul.secondary li a:hover { background: url('../img/tab-over-2px.gif') repeat-x scroll left bottom transparent }
+ul.secondary li a:hover,
+ul.secondary li a:hover span.meta { color: rgb(32, 95, 130) }
+ul.secondary li.active a,
+ul.secondary li.active span.empty {
+    color: rgb(51, 51, 51);
+    background: url('../img/tab-on-2px.gif') repeat-x scroll left bottom transparent;
+}
+ol.group li {
+    position: relative;
+    width: 220px;
+    float: left;
+    padding: 0pt;
+    margin: 0pt 20px 30px 0pt;
+}
+ol.group li.third { margin-right: 0pt }
+ol.group li h2 {
+    margin: 0pt;
+    padding: 0pt 0pt 0pt 10px;
+    font-size: 0.85em;
+    font-weight: normal;
+    line-height: 1.4em;
+    color: rgb(153, 153, 153);
+    vertical-align: middle;
+}
+ol.group li h2 a img {
+    float: left;
+    width: 16px;
+    margin: 0pt 5px 0pt 0pt;
+    vertical-align: middle;
+}
+ol.group li h2 a {
+    font-weight: bold;
+    text-decoration: none;
+}
+ol.group li h2 a:hover img { width: 16px }
+ol.group li div.box {
+    position: relative;
+    clear: left;
+    padding: 0pt 0pt 10px;
+    background: url('../img/item-bottom-sm.png') no-repeat scroll left bottom transparent;
+    overflow: hidden;
+}
+ol.group li div.box div.item {
+    padding: 10px;
+    background: url('../img/item-check-sm.gif') no-repeat scroll left top transparent;
+}
+ol.group li div.box a.item-over {
+    opacity: 0;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 180px;
+    height: 130px;
+    margin: 0pt;
+    padding: 10px;
+    font-size: 0.8em;
+    line-height: 2em;
+    text-decoration: none;
+    color: rgb(136, 136, 136);
+    background: url('../img/zoom-bg-white.png') no-repeat scroll right bottom transparent;
+}
+ol.group li div.box a.item-over strong {
+    display: block;
+    margin: 0pt;
+    font-weight: bold;
+    font-size: 1.4em;
+    line-height: 1.2em;
+}
+ol.group li div.box a.item-over span.dim {
+    font-weight: bold;
+    color: rgb(102, 102, 102);
+}
+ol.group li div.box a.item-over em {
+    display: block;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    margin: 0pt 0pt 3px;
+    font-size: 1em;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1em;
+    color: rgb(136, 136, 136);
+}
+ol.group li div.item-img {
+    width: 200px;
+    height: 150px;
+    overflow: hidden;
+}
+ol.group li div.box span.rebound-mark {
+    position: absolute;
+    bottom: 17px;
+    left: 10px;
+    z-index: 2;
+}
+ol.group li div.box span.has-rebounds {
+    padding: 0pt 0pt 0pt 9px;
+    font-size: 0.78em;
+    line-height: 1.5;
+    color: rgb(138, 186, 86);
+    background: url('../img/icon-rebound-source.png') no-repeat scroll 0pt 0pt transparent;
+}
+ol.group li ul.tools {
+    margin: 10px 0pt 0pt;
+    text-align: left;
+}
+ul.tools li {
+    float: right;
+    width: auto;
+    margin: 0pt 0pt 0pt 12px;
+    display: inline;
+    font-size: 0.78em;
+    line-height: 1;
+    color: rgb(170, 170, 170);
+}
+ul.tools li a {
+    text-decoration: none;
+    color: rgb(170, 170, 170);
+}
+ul.tools li.views {
+    margin-left: 0pt;
+    border-left: medium none;
+    padding-left: 19px;
+    background: url('../img/icon-views-sm.png') no-repeat scroll 0pt 50% transparent;
+}
+li.cmnt a,
+li.cmnt span {
+    padding-left: 15px;
+    background: url('../img/icon-comments.png') no-repeat scroll 0pt 0pt transparent;
+}
+li.cmnt a:hover { background-position: 0pt -15px }
+li.fav a,
+li.fav span {
+    padding-left: 15px;
+    background: url('../img/icon-hearts.gif') no-repeat scroll 0pt 0pt transparent;
+}
+li.fav a:hover { background-position: 0pt -17px }
+ul.tools li a:hover { color: rgb(119, 119, 119) }
+div.page {
+    padding: 20px 0pt 0pt;
+    font-weight: bold;
+    text-align: center;
+    border-top: 2px solid rgb(204, 204, 204);
+}
+div.page a {
+    margin: 0pt;
+    padding: 7px 12px;
+    font-size: 1em;
+    line-height: 1;
+    text-decoration: none;
+    color: rgb(102, 102, 102);
+    background: url('../img/glass-30.png') repeat-x scroll 0pt 50% rgb(211, 211, 211);
+    -moz-border-radius: 6px 6px 6px 6px;
+}
+div.page a:hover {
+    color: rgb(255, 255, 255);
+    background: url('../img/glass-light.png') repeat-x scroll 0pt 50% rgb(234, 76, 136);
+}
+ol.players-list {
+    margin: -8px 0pt 20px;
+    font-size: 0.9em;
+}
+#sidebar ol.players-list { font-size: 0.8em }
+ol.players-list li {
+    margin: 0pt;
+    padding: 8px 0pt;
+    border-bottom: 1px solid rgb(221, 221, 221);
+}
+ol.players-list li h4.vcard { margin: 0pt }
+#sidebar ol.players-list li h4.vcard { line-height: 1.4 }
+#sidebar ol.players-list li h4.vcard img { width: 24px }
+ol.players-list li span.user-meta {
+    display: block;
+    margin: 0pt;
+    padding: 0pt;
+    font-size: 0.85em;
+    font-weight: normal;
+    line-height: 1.2;
+    color: rgb(153, 153, 153);
+}
+#sidebar ol.players-list li span.user-meta {
+    font-size: 0.9em;
+    line-height: 1;
+}
+ol.players-list li span.user-meta i {
+    margin: 0pt 4px;
+    font-size: 0.9em;
+    text-shadow: 1px 1px 1px rgb(255, 255, 255);
+    color: rgb(187, 187, 187);
+}
+ol.players-list li:last-child { border-bottom: medium none }
+div.site ol.current-ads li:nth-child(4n) { margin-right: 0pt }
+#sidebar h3 {
+    margin: 0pt 0pt 15px;
+    padding: 0pt 0pt 8px;
+    font-size: 0.8em;
+    line-height: 1;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.9);
+    background: url('../img/border-2px.gif') repeat-x scroll left bottom transparent;
+}
+#sidebar h3 span.meta {
+    font-weight: normal;
+    line-height: 0.9;
+    color: rgb(85, 85, 85);
+}
+#sidebar h3.tab { padding-bottom: 0pt }
+#sidebar h3.tab:after {
+    content: ".";
+    display: block;
+    height: 0pt;
+    clear: both;
+    visibility: hidden;
+}
+.tab a {
+    float: left;
+    padding: 0pt 12px 8px 0pt;
+    font-weight: bold;
+    background: url('../img/icon-bluearrow.png') no-repeat scroll 100% 2px transparent;
+}
+.tab a:hover { background-position: 100% -20px }
+#sidebar h3.tab a span.meta { color: rgba(64, 131, 169, 0.8) }
+.tab a:hover,
+#sidebar h3.tab a:hover span.meta {
+    text-decoration: none;
+    color: rgb(32, 95, 130);
+}
+div.ad-top-wrap { margin: 18px 0pt 0pt;
+	    padding: 20px 0 0 0;
+    clear: both;
+     }
+div.ad {
+    margin: 0pt 0pt 20px;
+    padding: 10px 15px;
+    background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.05);
+    font-size: 0.75em;
+    font-weight: normal;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgb(221, 221, 221);
+    -moz-border-radius: 6px 6px 6px 6px;
+}
+div.ad a.flag {
+    display: block;
+    margin: 0pt 0pt 6px;
+    padding: 0pt;
+    font-size: 0.9em;
+    font-weight: bold;
+    line-height: 1.5;
+    text-transform: uppercase;
+    color: rgb(102, 102, 102);
+}
+div.ad a.flag:hover { color: rgb(51, 51, 51) }
+div.ad a {
+    display: block;
+    color: rgb(102, 102, 102);
+}
+div.ad a img {
+    display: block;
+    margin: 2px auto 5px;
+}
+div.ad a strong {
+    display: block;
+    clear: left;
+    font-weight: normal;
+    line-height: 1.3;
+}
+div.ad a em {
+    font-style: normal;
+    font-weight: bold;
+    color: rgb(64, 131, 169);
+}
+div.ad a:hover { text-decoration: none }
+h4.vcard {
+    margin: 0pt 0pt 20px;
+    font-size: 1.1em;
+    font-weight: bold;
+    line-height: 1.6em;
+}
+h4.vcard a img {
+    float: left;
+    width: 32px;
+    margin: 0pt 6px 0pt 0pt;
+    vertical-align: middle;
+    padding: 3px;
+    background: none repeat scroll 0% 0% rgb(255, 255, 255);
+    border: 1px solid rgb(229, 229, 229);
+}
+h4.vcard a:hover img {
+    border-color: transparent;
+    background: none repeat scroll 0% 0% transparent;
+}
+
+/* =  tags full width 
+-------------------------------------------------------------- */
+h2.section {
+    background: url("/img/border-2px.gif") repeat-x scroll left bottom transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.9);
+    font-size: 0.8em;
+    line-height: 1;
+    margin: 0 0 15px;
+    overflow: hidden;
+    padding: 0 0 8px;
+    text-transform: uppercase;
+}
+
+h2.section.taggy {
+	text-transform: none;
+	}
+h2.section.taggy a {
+	padding-right: 10px;	
+	background: url(../img/icon-arrows.gif) no-repeat 100% 5px;
+	}
+h2.section.taggy a:hover {	
+	background-position: 100% -17px;
+	}
+h2.section.taggy span {
+	padding-left: 12px;
+	color: #999;
+	background: url(../img/icon-tag.gif) no-repeat 0 1px;
+	}
+
+ol.tags {
+	margin: 0 0 20px 0;
+	}
+ol.tags li {
+	margin: 0;
+	position: relative;
+	display: block; 
+	font-size: 0.85em;
+	overflow: hidden;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	z-index: 1;
+	}
+ol.tags li:last-child {
+	border-bottom: none;
+	}
+ol.tags li span.perc {
+	position: absolute;
+	top: 0;
+	left: 0;
+	min-width: 12%;
+	height: 100%;
+	text-indent: -9999px;
+	display: block;
+	background: rgba(0,0,0,.07) url(../img/glass-light.png) repeat-x 0 50%;
+	overflow: hidden;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	-webkit-transition: background .2s ease-in-out;
+	-moz-transition: background .2s ease-in-out;
+	-o-transition: background .2s ease-in-out;
+	transition: background .2s ease-in-out;
+	}
+ol.tags li a {
+	display: block;
+	position: relative;
+	padding: 4px 12px;
+	font-weight: normal;
+	text-decoration: none;
+	z-index: 2;
+	color: #999;
+	}
+ol.tags li a:hover {
+	color: #666;
+	text-decoration: none;
+	}
+ol.tags li:hover {
+	background: #fff;
+	background: rgba(0,0,0,.07);
+	z-index: 1;
+	}
+ol.tags li:hover span.perc {
+	background: none;
+	}
+ol.tags li a strong {
+	font-weight: normal;
+	}
+ol.tags li a:hover strong,
+ol.tags li:hover a strong {
+	}
+ol.tags li a.delete-tag {
+	float: right;
+	margin: 5px 12px 0 0;
+	padding: 0;
+	width: 12px;
+	height: 12px;
+	vertical-align: middle;
+	color: #999;
+	background: url(../img/icon-tagx.png) no-repeat 0 0;
+	z-index: 3;
+	}
+ol.tags li a.delete-tag:hover {
+	background-position: 0 -12px;
+	}
+ol.tags li a.delete-tag img {
+	height: 0;
+	}
+ol.tags li em {
+	float: right;
+	padding: .4em 12px 0 0;
+	font-style: normal;
+	color: #bbb;
+	z-index: 3;
+	}
+ol.tags li em span.global a {
+	margin-left: 5px;
+	color: #999;
+	}
+ol.tags li em span.global a:hover {
+	color: #777;
+	}
+ol.main {
+	margin: 0 0 15px 0;
+	padding: 0 0 15px 50px;
+	border-bottom: 1px solid #ddd;
+	}
+ol.main li {	
+	margin: 0 0 3px 0;
+	}
+ol.main li a {	
+	color: #666;
+	}
+div.full p.tag-results {
+	float: right;
+	margin: 12px 0 0 0;
+	padding-left: 13px;
+	font-size: 1.1em;
+	line-height: 1;
+	background-image: url(../img/icon-tag.gif);
+	background-repeat: no-repeat;
+	background-position: 0 50%;
+	}
+h3.alpha {
+    color: #333333;
+    float: left;
+    font-size: 1.8em;
+    line-height: 1;
+    text-align: center;
+    text-shadow: 0 1px 0 #FFFFFF;
+    width: 30px;
+}
+
+/* =  tags  
+-------------------------------------------------------------- */
+ol.popular-tags { margin: 0pt 0pt 15px }
+ol.popular-tags li {
+    float: left;
+    margin: 0pt;
+    font-size: 0.85em;
+    line-height: 1;
+}
+ol.popular-tags li a {
+    float: left;
+    margin: 0pt 4px 5px 0pt;
+    padding: 4px 10px;
+    font-weight: normal;
+    text-decoration: none;
+    white-space: nowrap;
+    color: rgb(102, 102, 102);
+    border: 1px solid rgb(204, 204, 204);
+    background: url('../img/glass.png') repeat-x scroll 0pt 50% rgba(0, 0, 0, 0.07);
+    -moz-border-radius: 12px 12px 12px 12px;
+}
+ol.popular-tags li:hover { background: none repeat scroll 0% 0% transparent }
+ol.popular-tags li a:hover {
+    text-decoration: none;
+    background: none repeat scroll 0% 0% rgba(255, 255, 255, 0.7);
+}
+
+/* =  tables  
+-------------------------------------------------------------- */
+/* data tables
+---------------------------------------------------------- */
+
+table.data {
+	width: 100%;
+	margin: 0 0 25px 0;
+	padding: 0;
+	border-collapse: collapse;
+	}
+table.data th, table.data td {
+	margin: 0;
+	padding: 10px;
+	vertical-align: top;
+	border-bottom: 1px solid #ddd;
+	}
+table.data td.user {
+	white-space: nowrap;
+	}
+table.data td.num {
+	text-align: right;
+	}
+table.data th.num {
+	text-align: right;
+	}
+table.data td.date {	
+	font-size: .9em;
+	color: #777;
+	}
+table.data td.follow div.follow-prompt {	
+	float: right;
+	font-size: .9em;
+	line-height: 12px;
+	margin: 0;
+	}
+table.data td.follow div.follow-prompt form {	
+	margin: 0;
+	padding: 0;
+	}
+table.data td.follow a.follow,
+table.data td.follow a.following {
+	float: right;
+	padding: 6px;
+	width: 12px;
+	height: 12px;
+	margin-right: 0;
+	}
+table.data td.follow a.follow span,
+table.data td.follow a.following span {	
+	float: left;
+	padding-left: 12px;
+	text-indent: -999em;
+	}
+table.data td.draft a.draft,
+table.data td.draft span.draft-pending {	
+	float: none;
+	margin: 0 10px 0 0;
+	font-size: .8em;
+	}
+table.data tr:last-child th, table.data tr:last-child td {
+	border-bottom: none;
+	}
+table.data th {
+	padding: 0 10px 5px 10px;
+	text-align: left;
+	}
+table.data h4.vcard {
+	font-size: 1em;
+	line-height: 1.2;
+	margin-bottom: 0;
+	}
+table.data h4.vcard img {
+	width: 24px;
+	}
+table.data h4.vcard span.user-meta {
+	display: block;
+	margin: 0;
+	padding: 0;
+	font-size: .75em;
+	font-weight: normal;
+	line-height: 1.5;
+	color: #999;	
+	}
+span.user-meta a.url {
+	color: #999;
+	}
+span.user-meta a.url:hover {
+	color: #666;
+	}
+span.user-meta a.url:hover {
+	background-position: 100% -19px;
+	}
+table.data td blockquote {
+	margin-left: 0;
+	}
+table.data td a.action {
+	font-size: .9em;
+	}
+table.data td em.meta {
+	display: block;
+	font-size: .9em;
+	line-height: 1.4;
+	font-style: normal;
+	color: #999;
+	}
+table.users-table tr:hover {
+	background: #fff;
+	background: rgba(255,255,255,.5);
+	}
+table.users-table tr:last-child td {
+	border: none;
+	}
+table.users-table td.num {
+	font-size: 1em;
+	color: #777;
+	}
+table.users-table td.num strong {
+	font-size: 1.2em;
+	font-weight: bold;
+	color: #333;
+	}
+table.users-table td.num a {
+	padding: 5px 10px;
+	font-size: 1.2em;
+	font-weight: bold;
+	text-shadow: 0 1px 0 #fff;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	}
+table.users-table td.num a:hover {
+	color: #fff;
+	text-shadow: none;
+	background: #ea4c88 url(../img/glass-light.png) repeat-x 0 50%;
+	}
+table.users-table td.num em {
+	font-size: .7em;
+	font-weight: normal;
+	font-style: normal;
+	color: #777;
+	}
+table.users-table th {
+	padding: 8px 20px;
+	font-size: .8em;
+	line-height: 1.2;
+	font-weight: normal;
+	color: #999;
+	border-color: #fff;
+	background: url(../img/table-header-fade.png) repeat-x 0 100%;
+	}
+table.users-table th.list-title {	
+	padding-left: 10px;
+	}
+table.users-table td {
+	vertical-align: middle;
+	}
+table.pixel-table th,
+table.pixel-table td {
+	padding: 6px 0;
+	font-size: .8em;
+	color: #777;
+	}
+table.pixel-table td {
+	padding-left: 8px;
+	color: #333;
+	}
+table.pixel-table tr.grouped th,
+table.pixel-table tr.grouped td {
+	padding-bottom: 0;
+	border-bottom: none;
+	}
+table.users-table td a.follow,
+table.users-table td a.following {
+	margin: 0;
+	}
+
+/* =  announce  
+-------------------------------------------------------------- */
+div.announce-btn {
+    float: right;
+    width: 220px;
+    margin: -5px 0pt 0pt;
+}
+div.announce-featured { margin-top: -8px }
+div.announce-btn a {
+    display: block;
+    padding: 8px 10px;
+    font-size: 0.9em;
+    line-height: 1.2;
+    text-align: center;
+    color: rgb(153, 153, 153);
+    border: 1px solid rgb(221, 221, 221);
+    background: none repeat scroll 0% 0% rgb(255, 255, 255);
+    -moz-border-radius: 6px 6px 6px 6px;
+}
+div.announce-featured a {
+    padding: 5px 10px;
+    text-align: left;
+}
+div.announce-featured a img {
+    float: left;
+    margin: 2px 5px 0pt 0pt;
+}
+div.announce-btn a strong.title {
+    display: block;
+    margin-bottom: 0pt;
+    font-size: 1.1em;
+    color: rgb(234, 76, 136);
+}
+div.announce-featured a strong.title { color: rgb(51, 51, 51) }
+div.announce-btn a:hover {
+    color: rgba(255, 255, 255, 0.7);
+    border-color: rgb(234, 76, 136);
+    background: url('../img/glass-light.png') repeat-x scroll 0pt 50% rgb(234, 76, 136);
+}
+div.announce-featured a:hover {
+    color: rgb(153, 153, 153);
+    border-color: rgb(204, 204, 204);
+    background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.04);
+}
+div.announce-btn a:hover strong.title { color: rgb(255, 255, 255) }
+div.announce-featured a:hover strong.title { color: rgb(51, 51, 51) }
+
+
+/* =  footer  
+-------------------------------------------------------------- */
+#footer { 
+	margin-top: 30px;
+}
+#footer-inner {
+    width: 940px;
+    margin: 0pt auto;
+    padding: 20px 30px;
+    font-size: 1.2em;
+    color: rgb(153, 153, 153);
+}
+#footer a {
+    font-weight: bold;
+    color: rgb(119, 119, 119);
+}
+#footer a:hover {
+    text-decoration: none;
+    color: rgb(234, 76, 136);
+}
+#footer p {
+    margin: 0pt 0pt 8px;
+    line-height: 1.6;
+}
+#footer p#footer-primary {
+    margin-top: 3px;
+    color: rgb(204, 204, 204);
+}
+#footer-primary a { margin: 0pt 5px }
+#footer-primary a#f-home { margin-left: 0pt }
+#footer a.footer-twitter {
+    padding: 1px 0pt 0pt 20px;
+    background: url('../img/icon-twitter-footer.gif') no-repeat scroll 0pt 0pt transparent;
+}
+#footer a.footer-twitter:hover { background-position: 0pt -34px }
+
+hr,
+.hide { display: none }
+a img { border: medium none }
+.group:after {
+    content: ".";
+    display: block;
+    height: 0pt;
+    clear: both;
+    visibility: hidden;
+}
+:first-child + html .group,
+:first-child + html ul.tabs,
+:first-child + html h3.tab { min-height: 1px }

@@ -9,49 +9,46 @@
 	echo $this->Html->meta('icon');
 
 	echo $this->Html->css(array(
-		'/flour/css/fancybox',
 		// '/flour/css/blueprint',
-		'master',
+		'style',
 		'theme',
 	));
 	echo $this->Html->script(array(
-		'/flour/js/jquery',
-		'/flour/js/jquery.fancybox',
-		'/flour/js/jquery.slug',
-		'/flour/js/jquery.elastic',
-		'/flour/js/jquery.form',
-		'/flour/js/jquery.blockui',
+		'/flour/js/jquery/jquery',
+		'/flour/js/jquery/jqueryui',
+		'/flour/js/jquery/form',
+		'/flour/js/jquery/tipsy',
+		'/flour/js/jquery/blockui',
+		'/flour/js/init'
 	));
 
 	echo $scripts_for_layout;
 	?>
 </head>
 <body>
-	<div id="navbar">
-		<?php echo $this->element('navbar'); ?>
+	<div id="header">
+        <div id="header-inner">
+			<?php echo $this->element('header'); ?>
+			<?php echo $this->element('navbar'); ?>
+		</div>
 	</div>
 	<div id="container">
-		<div id="header">
-			<?php echo $this->element('header'); ?>
-		</div>
-		<div id="content">
+		<div id="main">
 			<?php
 			echo $this->Session->flash();
 			echo $content_for_layout;
 			?>
 		</div>
-		<div id="footer">
+		<div class="clear"></div>
+	</div>
+	<div id="footer">
+		<div id="footer-inner">
 			<?php echo $this->element('footer'); ?>
 		</div>
-		<div id="copyright">
-			<?php echo $this->element('copyright'); ?>
-		</div>
 	</div>
+		<!-- <div id="copyright">
+			<?php echo $this->element('copyright'); ?>
+		</div> -->
 	<?php echo $this->element('sql_dump'); ?>
-	<script>
-	$().ready(function() {
-		$("a.modal").fancybox();
-	});
-	</script>
 </body>
 </html>
