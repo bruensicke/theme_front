@@ -353,6 +353,10 @@ div.notice h2 {
     font-weight: normal;
     text-align: center;
 }
+
+
+/* =  secondary - navi  
+-------------------------------------------------------------- */
 ul.secondary {
     margin: 0pt 0pt 15px;
     padding: 0pt;
@@ -376,25 +380,28 @@ ul.secondary li {
     text-transform: uppercase;
     color: rgb(170, 170, 170);
 }
-ul.secondary li a,
-ul.secondary li span.empty {
+ul.secondary li a {
     float: left;
     padding: 0pt 0pt 8px;
     text-decoration: none;
 }
 ul.secondary li a:hover { background: url('../img/tab-over-2px.gif') repeat-x scroll left bottom transparent }
-ul.secondary li a:hover,
-ul.secondary li a:hover span.meta { color: rgb(32, 95, 130) }
-ul.secondary li.active a,
-ul.secondary li.active span.empty {
-    color: rgb(51, 51, 51);
-    background: url('../img/tab-on-2px.gif') repeat-x scroll left bottom transparent;
+ul.secondary li a:hover { color: rgb(32, 95, 130) }
+ul.secondary li.active a { 
+	color: rgb(51, 51, 51);
+	background: url('../img/tab-on-2px.gif') repeat-x scroll left bottom transparent;
 }
+/* /secondary navi */
+
+
+/* =  group  
+-------------------------------------------------------------- */
 ol.group li {
-    position: relative;
     width: 220px;
     float: left;
-    padding: 0pt;
+    position: relative;
+    padding: 0pt 0pt 10px;
+    overflow: hidden;    
     margin: 0pt 20px 30px 0pt;
 }
 ol.group li.third { margin-right: 0pt }
@@ -418,18 +425,14 @@ ol.group li h2 a {
     text-decoration: none;
 }
 ol.group li h2 a:hover img { width: 16px }
-ol.group li div.box {
-    position: relative;
-    clear: left;
-    padding: 0pt 0pt 10px;
-    background: url('../img/item-bottom-sm.png') no-repeat scroll left bottom transparent;
-    overflow: hidden;
-}
-ol.group li div.box div.item {
+
+ol.group li div.item {
     padding: 10px;
     background: url('../img/item-check-sm.gif') no-repeat scroll left top transparent;
+    border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 8px;
 }
-ol.group li div.box a.item-over {
+ol.group li a.item-over {
     opacity: 0;
     position: absolute;
     top: 10px;
@@ -444,18 +447,18 @@ ol.group li div.box a.item-over {
     color: rgb(136, 136, 136);
     background: url('../img/zoom-bg-white.png') no-repeat scroll right bottom transparent;
 }
-ol.group li div.box a.item-over strong {
+ol.group li a.item-over strong {
     display: block;
     margin: 0pt;
     font-weight: bold;
     font-size: 1.4em;
     line-height: 1.2em;
 }
-ol.group li div.box a.item-over span.dim {
+ol.group li a.item-over span.dim {
     font-weight: bold;
     color: rgb(102, 102, 102);
 }
-ol.group li div.box a.item-over em {
+ol.group li a.item-over em {
     display: block;
     position: absolute;
     bottom: 10px;
@@ -472,13 +475,13 @@ ol.group li div.item-img {
     height: 150px;
     overflow: hidden;
 }
-ol.group li div.box span.rebound-mark {
+ol.group li span.rebound-mark {
     position: absolute;
     bottom: 17px;
     left: 10px;
     z-index: 2;
 }
-ol.group li div.box span.has-rebounds {
+ol.group li span.has-rebounds {
     padding: 0pt 0pt 0pt 9px;
     font-size: 0.78em;
     line-height: 1.5;
@@ -521,14 +524,19 @@ li.fav span {
 }
 li.fav a:hover { background-position: 0pt -17px }
 ul.tools li a:hover { color: rgb(119, 119, 119) }
-div.page {
+
+/* /group */
+
+/* =  pagination  
+-------------------------------------------------------------- */
+.pagination {
     padding: 20px 0pt 0pt;
     font-weight: bold;
     text-align: center;
     border-top: 2px solid rgb(204, 204, 204);
 }
-div.page a {
-    margin: 0pt;
+.pagination a {
+    margin: 0px 5px;
     padding: 7px 12px;
     font-size: 1em;
     line-height: 1;
@@ -537,10 +545,13 @@ div.page a {
     background: url('../img/glass-30.png') repeat-x scroll 0pt 50% rgb(211, 211, 211);
     -moz-border-radius: 6px 6px 6px 6px;
 }
-div.page a:hover {
+.pagination a:hover {
     color: rgb(255, 255, 255);
     background: url('../img/glass-light.png') repeat-x scroll 0pt 50% rgb(234, 76, 136);
 }
+
+/* /pagination */
+
 ol.players-list {
     margin: -8px 0pt 20px;
     font-size: 0.9em;
