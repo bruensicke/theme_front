@@ -9,17 +9,19 @@
 	echo $this->Html->meta('icon');
 
 	echo $this->Html->css(array(
-		// '/flour/css/blueprint',
+		'/flour/css/fancybox',
 		'style',
-		'theme',
+		'app',
 	));
 	echo $this->Html->script(array(
-		'/flour/js/jquery/jquery',
-		'/flour/js/jquery/jqueryui',
-		'/flour/js/jquery/form',
-		'/flour/js/jquery/tipsy',
-		'/flour/js/jquery/blockui',
-		'/flour/js/init'
+		'/flour/js/jquery',
+		'/flour/js/jquery.ui',
+		'/flour/js/jquery.form',
+		'/flour/js/jquery.slug',
+		'/flour/js/jquery.tipsy',
+		'/flour/js/jquery.elastic',
+		'/flour/js/jquery.blockui',
+		'/flour/js/jquery.fancybox',
 	));
 
 	echo $scripts_for_layout;
