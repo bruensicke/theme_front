@@ -33,12 +33,10 @@
 		</div>
 	</div>
 	<div id="container">
-		<div id="main">
 			<?php
 			echo $this->Session->flash();
 			echo $content_for_layout;
 			?>
-		</div>
 		<div class="clear"></div>
 	</div>
 	<div id="footer">
@@ -46,9 +44,9 @@
 			<?php echo $this->element('footer'); ?>
 		</div>
 	</div>
-		<!-- <div id="copyright">
-			<?php echo $this->element('copyright'); ?>
-		</div> -->
+	<div id="copyright">
+		<?php // echo $this->element('copyright'); ?>
+	</div>
 	<?php echo $this->element('sql_dump'); ?>
 </body>
 </html>

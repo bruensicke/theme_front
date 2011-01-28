@@ -7,8 +7,3 @@ $this->Nav->add('Navbar', array(
 ));
 
 echo $this->Nav->show('Navbar', array('class' => 'services'));
-?>
-<ul class="options">
-	<li><a href="/">Home</a></li>
-</ul>
-<hr />
