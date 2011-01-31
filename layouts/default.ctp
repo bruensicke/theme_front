@@ -9,17 +9,19 @@
 	echo $this->Html->meta('icon');
 
 	echo $this->Html->css(array(
-		// '/flour/css/blueprint',
+		'/flour/css/fancybox',
 		'style',
-		'theme',
+		'app',
 	));
 	echo $this->Html->script(array(
-		'/flour/js/jquery/jquery',
-		'/flour/js/jquery/jqueryui',
-		'/flour/js/jquery/form',
-		'/flour/js/jquery/tipsy',
-		'/flour/js/jquery/blockui',
-		'/flour/js/init'
+		'/flour/js/jquery',
+		'/flour/js/jquery.ui',
+		'/flour/js/jquery.form',
+		'/flour/js/jquery.slug',
+		'/flour/js/jquery.tipsy',
+		'/flour/js/jquery.elastic',
+		'/flour/js/jquery.blockui',
+		'/flour/js/jquery.fancybox',
 	));
 
 	echo $scripts_for_layout;
@@ -33,12 +35,10 @@
 		</div>
 	</div>
 	<div id="container">
-		<div id="main">
 			<?php
 			echo $this->Session->flash();
 			echo $content_for_layout;
 			?>
-		</div>
 		<div class="clear"></div>
 	</div>
 	<div id="footer">
@@ -46,9 +46,9 @@
 			<?php echo $this->element('footer'); ?>
 		</div>
 	</div>
-		<!-- <div id="copyright">
-			<?php echo $this->element('copyright'); ?>
-		</div> -->
+	<div id="copyright">
+		<?php // echo $this->element('copyright'); ?>
+	</div>
 	<?php echo $this->element('sql_dump'); ?>
 </body>
 </html>
