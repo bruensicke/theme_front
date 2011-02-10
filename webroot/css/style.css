@@ -113,19 +113,19 @@ a:hover {
 	background: -webkit-gradient(linear, left top, left bottom, from(#1d7ba8), to(#0b577b)); /* for webkit browsers */
 	background: -moz-linear-gradient(top,  #1d7ba8,  #0b577b); /* for firefox 3.6+ */
 	}
-div#header ul {
+.primary {
     color: #1d7ba8;
 }
-div#header ul li a {
+.primary li a {
     color: #e6f1f5;
 }
-div#header ul li a:hover,
-div#header ul li#t-profile:hover a,
-div#header ul li#t-shots:hover a,
-div#header ul li#t-players:hover a {
+.primary li a:hover,
+.primary li#t-profile:hover a,
+.primary li#t-shots:hover a,
+.primary li#t-players:hover a {
     color: #fff;
 }
-div#header ul li ul {
+.primary li ul {
     background-color: #1c749a;
 }
 
@@ -133,12 +133,12 @@ ol.group li div.box a.item-over strong {
     color: rgb(234, 76, 136);
 }
 
-#footer { 
+.footer { 
 	border-top: 1px solid #dddddd;
 	background-color: #fff; 
 	}
 
-/* =  stucture  
+/* =  structure  
 -------------------------------------------------------------- */
 #wrap-inner {
     padding: 25px 0pt 30px;
@@ -156,7 +156,7 @@ ol.group li div.box a.item-over strong {
     width: 700px;
     font-size: 1.2em;
 }
-#sidebar {
+.sidebar {
     float: right;
     width: 220px;
     font-size: 1.2em;
@@ -191,92 +191,50 @@ ol.group li div.box a.item-over strong {
 
 /* =  primary navi
 -------------------------------------------------------------- */
-div#header ul {
+.primary {
     float: left;
-    width: 584px;
     margin: 2px 0pt 0pt 20px;
 }
-div#header ul li {
+.primaryright {
+    float: right;
+    margin: 2px 0pt 0pt 20px;
+}
+.primary li {
     float: left;
     margin: 0pt 4px 0pt 0pt;
-    font-size: 1.25em;
+    font-size: 12px !important;
     line-height: 1;
 }
-div#header ul li#t-profile,
-div#header ul li#t-signin,
-div#header ul li#t-signup { float: right }
-div#header ul li a {
+
+.primary li a {
     display: block;
     padding: 6px 10px 7px;
     text-decoration: none;
 }
-div#header ul li a:hover,
-div#header ul li#t-profile:hover a,
-div#header ul li#t-shots:hover a,
-div#header ul li#t-players:hover a {
+.primary li a:hover,
+.primary li:hover a {
     background: url('../img/glass-light.png') repeat-x scroll 0pt 50% rgba(255, 255, 255, 0.12);
     -moz-border-radius: 6px 6px 6px 6px;
 }
-div#header ul li#t-signin a,
-div#header ul li#t-signup a {
-    padding: 0pt;
-    margin: 6px 10px 6px 5px;
-    font-size: 0.9em;
-}
-div#header ul li#t-signin a:hover,
-div#header ul li#t-signup a:hover {
-    background: none repeat scroll 0% 0% transparent;
-    -moz-border-radius: 0pt 0pt 0pt 0pt;
-}
-body#user-profile div#header ul li#t-profile a,
-body#shots div#header ul li#t-shots a,
-body#players div#header ul li#t-players a,
-body#tags div#header ul li#t-tags a,
-body#activity div#header ul li#t-activity a,
-body#upld div#header ul li#t-upld a,
-body#about div#header ul li#t-about a,
-body#following li#t-following a,
-body#incoming-activity li#t-activity a {
-    font-weight: bold;
-    color: rgb(255, 255, 255);
-    background: url('../img/primary-shadow.png') repeat-x scroll left top rgba(43, 48, 53, 0.53);
-    -moz-border-radius: 6px 6px 6px 6px;
-}
-div#header ul li#t-profile a.url,
-div#header ul li#t-shots a.has-sub,
-div#header ul li#t-players a.has-sub {
+
+.primary li a.has-sub {
     padding-right: 22px;
     background: url('../img/icon-submenu.png') no-repeat scroll 100% 50% transparent;
 }
-div#header ul li#t-profile:hover a.url,
-body#user-profile div#header ul li#t-profile:hover a.url,
-div#header ul li#t-shots:hover a.has-sub,
-body#shots div#header ul li#t-shots:hover a.has-sub,
-div#header ul li#t-players:hover a.has-sub,
-body#players div#header ul li#t-players:hover a.has-sub {
+.primary li:hover a.url,
+.primary li:hover a.has-sub {
     background-color: rgba(255, 255, 255, 0.12);
     background-image: url('../img/glass-light.png'), url('../img/icon-submenu.png');
     background-repeat: repeat-x, no-repeat;
     background-position: 0pt 50%, 100% 50%;
 }
-body#user-profile div#header ul li#t-profile a.url,
-body#shots div#header ul li#t-shots a.has-sub,
-body#players div#header ul li#t-players a.has-sub {
-    background-image: url('../img/primary-shadow.png'), url('../img/icon-submenu.png');
-    background-repeat: repeat-x, no-repeat;
-    background-position: left top, 100% 50%;
-}
-div#header ul li#t-profile:hover a,
-body#user-profile div#header ul li#t-profile:hover a,
-div#header ul li#t-shots:hover a,
-body#shots div#header ul li#t-shots:hover a,
-div#header ul li#t-players:hover a,
-body#players div#header ul li#t-players:hover a {
+.primary li:hover a.has-sub {
+    -moz-border-radius: 6px 6px 6px 6px;
     -moz-border-radius-bottomleft: 0pt;
     -moz-border-radius-bottomright: 0pt;
     -moz-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
 }
-div#header ul li ul {
+.primary li ul {
     position: absolute;
     display: none;
     float: left;
@@ -286,31 +244,36 @@ div#header ul li ul {
     -moz-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
     z-index: 2;
 }
-div#header ul li ul li {
+.primary li ul li {
     clear: left;
     margin: 0pt;
     width: 100%;
 }
 
-div#header ul li:hover ul li a {
+.primary li:hover ul li a {
     padding: 5px 10px;
-    font-size: 0.7em;
+    font-size:10px;
     font-weight: normal;
     color: rgb(187, 191, 195);
     background: none repeat scroll 0% 0% transparent;
     -moz-box-shadow: none;
 }
-div#header ul li ul li a:hover {
+.primary li ul li a:hover {
     color: rgb(255, 255, 255);
     background: none repeat scroll 0% 0% rgba(255, 255, 255, 0.1);
     -moz-border-radius: 0pt 0pt 0pt 0pt;
 }
-div#header ul li ul li a:active { background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.15) }
-div#header ul li ul li:last-child a,
-div#header ul li ul li:last-child a,
-div#header ul li ul li:last-child a { border-bottom: medium none }
+.primary li ul li a:active { background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.15) }
+.primary li ul li:last-child a,
+.primary li ul li:last-child a,
+.primary li ul li:last-child a { border-bottom: medium none }
 
-
+.primary li a.active {
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    background: url('../img/primary-shadow.png') repeat-x scroll left top rgba(43, 48, 53, 0.53);
+    -moz-border-radius: 6px 6px 6px 6px;
+}
 /* =    
 -------------------------------------------------------------- */
 a.tagline-action {
@@ -547,20 +510,23 @@ ul.tools li a:hover { color: rgb(119, 119, 119) }
 
 /* /pagination */
 
-ol.players-list {
+/* =  short-list  
+-------------------------------------------------------------- */
+
+ol.short-list {
     margin: -8px 0pt 20px;
     font-size: 0.9em;
 }
-#sidebar ol.players-list { font-size: 0.8em }
-ol.players-list li {
+.sidebar ol.short-list { font-size: 0.8em }
+ol.short-list li {
     margin: 0pt;
     padding: 8px 0pt;
     border-bottom: 1px solid rgb(221, 221, 221);
 }
-ol.players-list li h4.vcard { margin: 0pt }
-#sidebar ol.players-list li h4.vcard { line-height: 1.4 }
-#sidebar ol.players-list li h4.vcard img { width: 24px }
-ol.players-list li span.user-meta {
+ol.short-list li h4.vcard { margin: 0pt }
+.sidebar ol.short-list li h4.vcard { line-height: 1.4 }
+.sidebar ol.short-list li h4.vcard img { width: 24px }
+ol.short-list li span.user-meta {
     display: block;
     margin: 0pt;
     padding: 0pt;
@@ -569,19 +535,19 @@ ol.players-list li span.user-meta {
     line-height: 1.2;
     color: rgb(153, 153, 153);
 }
-#sidebar ol.players-list li span.user-meta {
+.sidebar ol.short-list li span.user-meta {
     font-size: 0.9em;
     line-height: 1;
 }
-ol.players-list li span.user-meta i {
+ol.short-list li span.user-meta i {
     margin: 0pt 4px;
     font-size: 0.9em;
     text-shadow: 1px 1px 1px rgb(255, 255, 255);
     color: rgb(187, 187, 187);
 }
-ol.players-list li:last-child { border-bottom: medium none }
+ol.short-list li:last-child { border-bottom: medium none }
 div.site ol.current-ads li:nth-child(4n) { margin-right: 0pt }
-#sidebar h3 {
+.sidebar h3 {
     margin: 0pt 0pt 15px;
     padding: 0pt 0pt 8px;
     font-size: 0.8em;
@@ -590,78 +556,11 @@ div.site ol.current-ads li:nth-child(4n) { margin-right: 0pt }
     border-bottom: 1px solid rgba(255, 255, 255, 0.9);
     background: url('../img/border-2px.gif') repeat-x scroll left bottom transparent;
 }
-#sidebar h3 span.meta {
+.sidebar h3 span.meta {
     font-weight: normal;
     line-height: 0.9;
     color: rgb(85, 85, 85);
 }
-#sidebar h3.tab { padding-bottom: 0pt }
-#sidebar h3.tab:after {
-    content: ".";
-    display: block;
-    height: 0pt;
-    clear: both;
-    visibility: hidden;
-}
-.tab a {
-    float: left;
-    padding: 0pt 12px 8px 0pt;
-    font-weight: bold;
-    background: url('../img/icon-bluearrow.png') no-repeat scroll 100% 2px transparent;
-}
-.tab a:hover { background-position: 100% -20px }
-#sidebar h3.tab a span.meta { color: rgba(64, 131, 169, 0.8) }
-.tab a:hover,
-#sidebar h3.tab a:hover span.meta {
-    text-decoration: none;
-    color: rgb(32, 95, 130);
-}
-div.ad-top-wrap { margin: 18px 0pt 0pt;
-	    padding: 20px 0 0 0;
-    clear: both;
-     }
-div.ad {
-    margin: 0pt 0pt 20px;
-    padding: 10px 15px;
-    background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.05);
-    font-size: 0.75em;
-    font-weight: normal;
-    text-align: center;
-    color: rgba(0, 0, 0, 0.6);
-    border: 1px solid rgb(221, 221, 221);
-    -moz-border-radius: 6px 6px 6px 6px;
-}
-div.ad a.flag {
-    display: block;
-    margin: 0pt 0pt 6px;
-    padding: 0pt;
-    font-size: 0.9em;
-    font-weight: bold;
-    line-height: 1.5;
-    text-transform: uppercase;
-    color: rgb(102, 102, 102);
-}
-div.ad a.flag:hover { color: rgb(51, 51, 51) }
-div.ad a {
-    display: block;
-    color: rgb(102, 102, 102);
-}
-div.ad a img {
-    display: block;
-    margin: 2px auto 5px;
-}
-div.ad a strong {
-    display: block;
-    clear: left;
-    font-weight: normal;
-    line-height: 1.3;
-}
-div.ad a em {
-    font-style: normal;
-    font-weight: bold;
-    color: rgb(64, 131, 169);
-}
-div.ad a:hover { text-decoration: none }
 h4.vcard {
     margin: 0pt 0pt 20px;
     font-size: 1.1em;
@@ -681,6 +580,80 @@ h4.vcard a:hover img {
     border-color: transparent;
     background: none repeat scroll 0% 0% transparent;
 }
+
+/* /short-list */
+
+
+.sidebar h3.tab { padding-bottom: 0pt }
+.sidebar h3.tab:after {
+    content: ".";
+    display: block;
+    height: 0pt;
+    clear: both;
+    visibility: hidden;
+}
+.tab a {
+    float: left;
+    padding: 0pt 12px 8px 0pt;
+    font-weight: bold;
+}
+.tab a:hover { background-position: 100% -20px }
+.sidebar h3.tab a span.meta { color: rgba(64, 131, 169, 0.8) }
+.tab a:hover,
+.sidebar h3.tab a:hover span.meta {
+    text-decoration: none;
+    color: rgb(32, 95, 130);
+}
+
+/* =  roundedbox  
+-------------------------------------------------------------- */
+div.roundedbox {
+    clear: both;
+    margin: 18px 0pt 20px;
+    padding: 10px 15px;
+    background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.05);
+    font-size: 0.75em;
+    font-weight: normal;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgb(221, 221, 221);
+    -moz-border-radius: 6px 6px 6px 6px;
+}
+div.roundedbox a.flag {
+    display: block;
+    margin: 0pt 0pt 6px;
+    padding: 0pt;
+    font-size: 0.9em;
+    font-weight: bold;
+    line-height: 1.5;
+    text-transform: uppercase;
+    color: rgb(102, 102, 102);
+}
+div.roundedbox a.flag:hover { color: rgb(51, 51, 51) }
+div.roundedbox a {
+    display: block;
+    color: rgb(102, 102, 102);
+}
+div.roundedbox a img {
+    display: block;
+    margin: 2px auto 5px;
+}
+div.roundedbox a strong {
+    display: block;
+    clear: left;
+    font-weight: normal;
+    line-height: 1.3;
+}
+div.roundedbox a em {
+    font-style: normal;
+    font-weight: bold;
+    color: rgb(64, 131, 169);
+}
+div.roundedbox a:hover { text-decoration: none }
+
+
+/* /roundedbox */
+
 
 /* =  tags full width 
 -------------------------------------------------------------- */
@@ -1089,39 +1062,39 @@ div.announce-featured a:hover strong.title { color: rgb(51, 51, 51) }
 
 /* =  footer  
 -------------------------------------------------------------- */
-#footer { 
+.footer { 
 	margin-top: 30px;
 }
-#footer-inner {
+.footer-inner {
     width: 940px;
     margin: 0pt auto;
     padding: 20px 30px;
     font-size: 1.2em;
     color: rgb(153, 153, 153);
 }
-#footer a {
+.footer a {
     font-weight: bold;
     color: rgb(119, 119, 119);
 }
-#footer a:hover {
+.footer a:hover {
     text-decoration: none;
     color: rgb(234, 76, 136);
 }
-#footer p {
+.footer p {
     margin: 0pt 0pt 8px;
     line-height: 1.6;
 }
-#footer p#footer-primary {
+.footer p.footer-primary {
     margin-top: 3px;
     color: rgb(204, 204, 204);
 }
-#footer-primary a { margin: 0pt 5px }
-#footer-primary a#f-home { margin-left: 0pt }
-#footer a.footer-twitter {
+.footer-primary a { margin: 0pt 5px }
+.footer-primary a#f-home { margin-left: 0pt }
+.footer a.footer-twitter {
     padding: 1px 0pt 0pt 20px;
     background: url('../img/icon-twitter-footer.gif') no-repeat scroll 0pt 0pt transparent;
 }
-#footer a.footer-twitter:hover { background-position: 0pt -34px }
+.footer a.footer-twitter:hover { background-position: 0pt -34px }
 
 hr,
 .hide { display: none }

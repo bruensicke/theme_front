@@ -1,6 +1,6 @@
 
 /* Drop-down menus on hover */
-$('#primary li').hover(
+$('.primary li').hover(
 	function() { $(this).find('ul.tabs').show(); },
 	function() { $(this).find('ul.tabs').hide(); }
 );
