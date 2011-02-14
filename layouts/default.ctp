@@ -10,7 +10,7 @@
 
 	echo $this->Html->css(array(
 		'/flour/css/fancybox',
-		'style',
+		'theme',
 		'app',
 	));
 	echo $this->Html->script(array(
