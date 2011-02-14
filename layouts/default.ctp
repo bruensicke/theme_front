@@ -31,7 +31,7 @@
 	<div id="header">
         <div id="header-inner">
 			<?php echo $this->element('header'); ?>
-			<?php echo $this->element('navbar'); ?>
+			<?php echo $this->element('nav.main'); ?>
 		</div>
 	</div>
 	<div id="container">
