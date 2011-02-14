@@ -133,7 +133,7 @@ ol.group li div.box a.item-over strong {
     color: rgb(234, 76, 136);
 }
 
-.footer { 
+#footer { 
 	border-top: 1px solid #dddddd;
 	background-color: #fff; 
 	}
@@ -1062,39 +1062,39 @@ div.announce-featured a:hover strong.title { color: rgb(51, 51, 51) }
 
 /* =  footer  
 -------------------------------------------------------------- */
-.footer { 
+#footer { 
 	margin-top: 30px;
 }
-.footer-inner {
+#footer-inner {
     width: 940px;
     margin: 0pt auto;
     padding: 20px 30px;
     font-size: 1.2em;
     color: rgb(153, 153, 153);
 }
-.footer a {
+#footer a {
     font-weight: bold;
     color: rgb(119, 119, 119);
 }
-.footer a:hover {
+#footer a:hover {
     text-decoration: none;
     color: rgb(234, 76, 136);
 }
-.footer p {
+#footer p {
     margin: 0pt 0pt 8px;
     line-height: 1.6;
 }
-.footer p.footer-primary {
+#footer p#footer-primary {
     margin-top: 3px;
     color: rgb(204, 204, 204);
 }
-.footer-primary a { margin: 0pt 5px }
-.footer-primary a#f-home { margin-left: 0pt }
-.footer a.footer-twitter {
+#footer-primary a { margin: 0pt 5px }
+#footer-primary a#f-home { margin-left: 0pt }
+#footer a#footer-twitter {
     padding: 1px 0pt 0pt 20px;
     background: url('../img/icon-twitter-footer.gif') no-repeat scroll 0pt 0pt transparent;
 }
-.footer a.footer-twitter:hover { background-position: 0pt -34px }
+#footer a#footer-twitter:hover { background-position: 0pt -34px }
 
 hr,
 .hide { display: none }
