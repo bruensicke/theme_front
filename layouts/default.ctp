@@ -22,6 +22,8 @@
 		'/flour/js/jquery.elastic',
 		'/flour/js/jquery.blockui',
 		'/flour/js/jquery.fancybox',
+		'theme',
+		'app',
 	));
 
 	echo $scripts_for_layout;
